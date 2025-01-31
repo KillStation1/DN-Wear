@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка - DN Wear</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <!-- Верхняя панель -->
+    <!-- Логотип -->
+    <div class="logo-container">
+        <a href="index.html" class="logo-link">
+            <img src="image.png" alt="Логотип" class="logo-img">
+        </a>
+        <div class="logo-text">DN Wear</div>
+    </div>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- Страница доставки -->
+    <section class="delivery">
+        <h2>Оформление доставки</h2>
+
+        <div class="delivery-info">
+            <h3>Способы доставки:</h3>
+            <ul>
+                <li><strong>Курьерская доставка:</strong> Мы осуществляем доставку курьером по вашему адресу. Стоимость зависит от вашего местоположения и будет рассчитана при оформлении заказа.</li>
+                <li><strong>Доставка Почтой России:</strong> Доставка по всей России. Стоимость и сроки зависят от региона.</li>
+                <li><strong>Самовывоз:</strong> Вы можете забрать заказ самостоятельно из нашего магазина по адресу: ул. Илюшина, д. 15, Вологда.</li>
+            </ul>
+        </div>
+
+        <h3>Введите данные для доставки</h3>
+        <form action="#" method="POST" class="delivery-form">
+            <label for="name">ФИО:</label>
+            <input type="text" id="name" name="name" required placeholder="Ваше имя">
+
+            <label for="address">Адрес доставки:</label>
+            <input type="text" id="address" name="address" required placeholder="Улица, дом, квартира">
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Ваш номер телефона" pattern="\+?[0-9]{1,4}[0-9]{10}" title="Номер телефона в международном формате, например: +79123456789">
+
+            <label for="delivery-method">Способ доставки:</label>
+            <select id="delivery-method" name="delivery-method" required>
+                <option value="courier">Курьерская доставка</option>
+                <option value="post">Почта России</option>
+                <option value="pickup">Самовывоз</option>
+            </select>
+
+            <!-- Добавляем строку для ввода названия товара -->
+            <label for="product-name">Название товара:</label>
+            <input type="text" id="product-name" name="product-name" required placeholder="Введите название товара"
+        </form>
+
+        <button type="submit" class="btn">Оформить заказ</button>
+        </form>
+
+        <!-- Карта с Google Maps -->
+        <div class="google-map">
+            <h3>Адрес нашего магазина:</h3>
+            <p><a href="https://www.google.ru/maps/place/Университетский+колледж+ВоГУ/@59.2094,39.8163199,612m/data=!3m1!1e3!4m10!1m2!2m1!1z0YPQvdC40LLQtdGA0YHQuNGC0LXRgtGB0Y_QutC40Lkg0LrQvtC70LXQtNC2!3m6!1s0x46ae976999b44d89:0xce57251910ade1a0!8m2!3d59.2094!4d39.8188949!15sCi3Rg9C90LjQstC10YDRgdC40YLQtdGC0YHRj9C60LjQuSDQutC-0LvQtdC00LZaLyIt0YPQvdC40LLQtdGA0YHQuNGC0LXRgtGB0Y_QutC40Lkg0LrQvtC70LXQtNC2kgEHY29sbGVnZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VOaGFWQlhTVFZSUlJBQuABAPoBBAgAEDQ!16s%2Fg%2F11j1hygbwv?entry=ttu&g_ep=EgoyMDI1MDEyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Посмотреть на карте</a></p>
+        </div>
+
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2025 DN Wear. Все права защищены.</p>
+        <div class="footer-column">
+            <a href="privacy.html">Политика конфиденциальности</a>
+            <a href="#">О нас</a>
+        </div>
+    </footer>
+</body>
+</html>

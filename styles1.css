@@ -1,0 +1,440 @@
+body {
+    background-color: #2e1f14;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background-color: #d2b48c;
+    padding: 10px;
+    text-align: center;
+    color: #000;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: #d2b48c;
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #4d3021;
+    padding: 10px;
+}
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+/* --- Слайдер --- */
+.slider {
+    position: relative;
+    width: 1164px;
+    height: 448px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 1164px;
+    flex-shrink: 0;
+}
+
+    .slide img {
+        width: 1164px;
+        height: 448px;
+        object-fit: cover;
+        display: block;
+    }
+
+input[type="radio"] {
+    display: none;
+}
+
+/* --- Управление слайдами (Кнопки) --- */
+.controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+    .controls label {
+        width: 15px;
+        height: 15px;
+        background: #d2b48c;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .controls label:hover {
+            background: #b8956b;
+        }
+
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-1164px);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-2328px);
+}
+
+/* --- Каталог товаров --- */
+.products {
+    padding: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #5a3b2c;
+    padding: 10px;
+    text-align: center;
+}
+
+    .product a {
+        display: inline-block;
+        padding: 10px 15px;
+        margin-top: 10px;
+        background-color: #d2b48c;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+        .product a:hover {
+            background-color: #b8956b;
+        }
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #d2b48c;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+    .btn:hover {
+        background-color: #b8956b;
+    }
+
+footer {
+    background-color: #4d3021;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* --- Адаптация под мобильные устройства --- */
+@media (max-width: 1200px) {
+    .slider {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide {
+        width: 100%;
+    }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .controls label {
+        width: 12px;
+        height: 12px;
+    }
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Увеличил отступ для лучшего визуального восприятия */
+    background-color: #3b231f; /* Более темный фон для контраста */
+    color: #d2b48c; /* Цвет текста, чтобы он был виден на темном фоне */
+}
+
+.footer-column {
+    margin: 10px 0; /* Увеличил отступ между блоками ссылок */
+}
+
+    .footer-column a {
+        display: center;
+        color: #d2b48c;
+        text-decoration: none;
+        margin-top: 5px;
+        font-size: 1.1em; /* Немного увеличил размер шрифта */
+    }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+            color: #b8956b; /* Цвет при наведении для улучшенной интерактивности */
+        }
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-left: -150px;
+}
+
+.logo-link {
+    display: flex;
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Наследуем цвет от родительских элементов */
+}
+
+.logo-img {
+    width: 500px; /* Размер логотипа */
+    height: 50px;
+    object-fit: cover; /* Масштабируем изображение */
+   
+}
+
+.logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #d2b48c; 
+}
+.catalog {
+    padding: 20px;
+    background-color: #2e1f14;
+    color: #fff;
+}
+
+.catalog-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #d2b48c; /* Цвет заголовка */
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #5a3b2c;
+    padding: 15px;
+    text-align: center;
+    width: 300px; /* Фиксированная ширина для каждого товара */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    .product img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .product p {
+        margin: 10px 0;
+        font-size: 1.2em;
+    }
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d2b48c;
+}
+
+.product a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #d2b48c;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+    .product a:hover {
+        background-color: #b8956b;
+    }
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #d2b48c;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+    .btn:hover {
+        background-color: #b8956b;
+    }
+.google-map iframe {
+    margin: 0 auto;
+}
+.contact-info, .map {
+    text-align: center;
+    width: 100%;
+}
+    .contact-info h2 {
+        color: #d2b48c;
+    }
+    .contact-info h3 {
+        color: #d2b48c;
+    }
+/* --- Стиль для страницы доставки --- */
+.delivery {
+    padding: 20px;
+    background-color: #2e1f14;
+    color: #fff;
+}
+
+    .delivery h2 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #d2b48c;
+    }
+
+.delivery-info, .delivery-details {
+    margin-bottom: 20px;
+}
+
+    .delivery-info h3, .delivery-details h3 {
+        font-size: 1.8em;
+        color: #d2b48c;
+    }
+
+    .delivery-info ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .delivery-info ul li {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+/* --- Стиль формы --- */
+.delivery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+    .delivery-form label {
+        font-size: 1.2em;
+        color: #d2b48c;
+    }
+
+    .delivery-form input,
+    .delivery-form select {
+        padding: 10px;
+        font-size: 1em;
+        background-color: #5a3b2c;
+        border: 1px solid #d2b48c;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+        .delivery-form input::placeholder {
+            color: #fff;
+        }
+
+    .delivery-form button {
+        padding: 15px;
+        background-color: #d2b48c;
+        color: #000;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .delivery-form button:hover {
+            background-color: #b8956b;
+        }
+
+/* --- Карта --- */
+.google-map iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    margin-top: 20px;
+}
+
+.google-map {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.map-title {
+    font-size: 1.5em;
+    color: #d2b48c; /* Цвет текста */
+    margin-bottom: 10px;
+}
+
+.map-link-container p {
+    margin-top: 10px;
+}
+
+.map-link-container a {
+    color: #d2b48c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+    .map-link-container a:hover {
+        color: #b8956b; /* Цвет при наведении */
+    }
